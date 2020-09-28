@@ -19,5 +19,8 @@ describe("<Signup /> Page", () => {
       username: "André",
       password: "password",
     });
+
+    // wait for the router to do its job after 2 seconds
+    cy.wait(3000)
   });
 });

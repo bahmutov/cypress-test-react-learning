@@ -5,6 +5,7 @@ import { signup } from "../lib";
 
 const Signup = () => {
   const router = useRouter();
+  console.log('useRouter returned', router)
   const [form, setForm] = useState({ username: "", password: "" });
   const [message, setMessage] = useState("");
   async function submit(e) {
@@ -15,6 +16,8 @@ const Signup = () => {
     console.log("data:", data);
     setMessage("Redirecting you back to main page");
     setTimeout(() => {
+      console.log('router.push /')
+      console.log('router is', router)
       router.push("/");
     }, 2000);
   }
